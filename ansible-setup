@@ -1,0 +1,16 @@
+ sudo yum update -y
+yum install ansible -y
+amazon-linux-extras install ansible2 -y
+ansible --version
+yum install python-pip -y
+useradd ansible
+passwd ansible
+vi /etc/ssh/sshd_config
+63 passwd auth yes
+vi /etc/ansible/ansible.cfg  ====>> enable inventory & root user
+vi /etc/ansible/hosts   ====>> add here slave ip address
+visudo  =====>>>> 100th line ====>> add user permissions ====>> ansible ALL=(ALL) NOPASSWD:all 
+
+
+
+
