@@ -10,7 +10,8 @@ vi /etc/ssh/sshd_config
 vi /etc/ansible/ansible.cfg  ====>> enable inventory & root user
 vi /etc/ansible/hosts   ====>> add here slave ip address
 visudo  =====>>>> 100th line ====>> add user permissions ====>> ansible ALL=(ALL) NOPASSWD:all 
-
-
+SSH-COPY-ID    SLAVE1USERNAME@SLAVE-1 PUBIC:IP
+SSH SLAVE1USERNAME@PUBLIC:IP  ====>>> to connect slaves
+ansible-playbook sampath.yml --extra-vars "xyz=maven" ===>> extra packages install vth variables
 
 
